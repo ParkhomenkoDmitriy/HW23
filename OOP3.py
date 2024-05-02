@@ -14,7 +14,7 @@ class Circle(Point):
         x = self.x + other.x
         y = self.y + other.y
         radius = self.radius + other.radius
-        return f'сложение метод: add {Circle(x, y, radius)}'
+        return Circle(x, y, radius)
 
     def __sub__(self, other):
         if self.radius == other.radius:
@@ -27,17 +27,19 @@ class Circle(Point):
 
         return Circle(x_sub, y_sub, radius_sub)
 
-
     def area(self):
         return math.pi * (self.radius ** 2)
 
 
 x_1 = Circle(2, 5, 2)
 x_2 = Circle(2, 5, 2)
-print(x_1)
-print(x_1.distance_from_origin())
-print(x_1.area())
 
-print(x_1 + x_2)
+x_3 = Circle(3, 7, 1)
+x_4 = Circle(2, 5, 2)
+# print(x_1)
+# print(x_1.distance_from_origin())
+# print(x_1.area())
+#
+# print(x_1 + x_2)
 print(x_1 - x_2)
-
+print(x_3 - x_4)
