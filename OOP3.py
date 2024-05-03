@@ -21,7 +21,7 @@ class Circle(Point):
             return Point(self.x, self.y)
 
         x_sub = self.x - other.x
-        y_sub = self.x - other.y
+        y_sub = self.y - other.y
 
         radius_sub = abs(self.radius - other.radius)
 
