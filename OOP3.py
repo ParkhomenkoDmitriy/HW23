@@ -20,8 +20,8 @@ class Circle(Point):
         if self.radius == other.radius:
             return Point(self.x, self.y)
 
-        x_sub = (self.x + other.x) / 2
-        y_sub = (self.x + other.y) / 2
+        x_sub = self.x - other.x
+        y_sub = self.x - other.y
 
         radius_sub = abs(self.radius - other.radius)
 
